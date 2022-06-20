@@ -16,9 +16,9 @@
 <body>
     <!------------------------------ HEADER ----------------------------->
     <header class="container">
-        <div class="d-flex flex-wrap justify-content-center py-3 mb-4">
+        <div class="d-flex flex-wrap justify-content-center py-3">
             <!-- <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none"> -->
-            <h1 class=" mb-3 mb-md-0 me-md-auto text-dark logo">N&C</h1>
+            <h1 class="mb-3 mb-md-0 me-md-auto text-dark logo">N&C</h1>
             <!-- </a> -->
 
             <ul class="nav nav-pills">
@@ -28,54 +28,149 @@
             </ul>
         </div>
     </header>
+    <!------------------------------ CAROUSEL ----------------------------->
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+                <img src="./img/grafico.jpg" class="d-block w-100 grafico" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>First slide label</h5>
+                    <p>Some representative placeholder content for the first slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="./img/graph.jpg" class="d-block w-100 graph" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Second slide label</h5>
+                    <p>Some representative placeholder content for the second slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./img/grafico.jpg" class="d-block w-100 grafico" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Third slide label</h5>
+                    <p>Some representative placeholder content for the third slide.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
     <!------------------------------ CONTÉUDO ----------------------------->
     <main>
         <div class="container">
-            <h1 class="mt-5 text-center">Como Investir</h1>
+            <!------------------------------ CARD ----------------------------->
+            <div class="row row-cols-1 row-cols-md-3 g-4 mt-3 mb-5 pt-5 pb-5">
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <svg class="bd-placeholder-img rounded-circle" width="90" height="90"
+                                xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140"
+                                preserveAspectRatio="xMidYMid slice" focusable="false">
+                                <title>Placeholder</title>
+                                <rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777"
+                                    dy=".3em">140x140</text>
+                            </svg>
 
-            <h2 class="mt-5">O que são Juros Compostos?</h2>
-            <p class="mt-4 fs-6">Os juros compostos são aqueles nos quais os juros do mês são incorporados ao
-                capital. Com uma taxa assim, o valor cresce muito mais rápido do que com juros simples. No caso de uma
-                dívida, é perigoso. No caso de um investimento, é excelente.</p>
-            <p class="fs-6">Em ambos os cenários, de dívida e investimento em instituições financeiras, o juro calculado
-                é sempre de modo composto. Um exemplo de aplicação desse tipo de juro está na fatura do cartão de
-                crédito.</p>
-            <p class="fs-6">Ao não pagá-la por completo, o valor pode aumentar consideravelmente no próximo mês devido à
-                incidência contínua desses juros. Porém, também é possível focar nos juros compostos que trabalham por
-                você e que podem contribuir para uma vida financeira mais tranquila.
-            </p>
-            <p class="fs-6">Para isso, além de ler com atenção este post, não se esqueça de controlar mensalmente suas
-                finanças. Primeiramente, resolva a pendência. Depois, busque sua independência a partir de investimentos
-                nos quais os juros são seus aliados.</p>
+                            <h5 class="card-title mt-1">Card title</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in
+                                to
+                                additional content. This content is a little bit longer.</p>
+                        </div>
+                    </div>
 
-            <h2 class="mt-5">Diferença entre juros simples e juros compostos</h2>
-            <p class="mt-4 text-start fs-6">A diferença básica entre juros simples e juros compostos é a base de cálculo da
-                taxa. Nos juros simples, a taxa é aplicada apenas sobre o valor inicial.</p>
-            <p class="fs-6">Nos juros compostos, ela é aplicada sobre o valor do último mês (acumulando os efeitos dos
-                juros anteriores). Ou seja, nesse último caso, o valor cresce exponencialmente. É o que se chama de
-                juros sobre juros.</p>
-            <p class="fs-6">Vamos a um exemplo de um empréstimo de R$ 10 mil, considerando uma taxa mensal de 1%. No
-                caso dos juros simples, o valor devido aumenta em R$ 100,00 (1% de R$ 10.000,00) a cada mês. Em 12
-                meses, o total será de R$ 11.200,00.
-            </p>
-            <p class="fs-6">No caso dos juros compostos, o valor devido aumenta em R$ 100 no primeiro mês (1% de R$
-                10.000,00), R$ 101 no segundo mês (1% de R$ 10.100,00), R$ 102,01 no terceiro mês (1% de R$ 10.201,00) e
-                assim sucessivamente. Em 12 meses, o total será de R$ 11.268,25.</p>
-            <p class="fs-6">Percebeu a diferença? O valor cresce mais com os juros compostos. E é com eles que você pode
-                contar para fazer seu patrimônio render com os investimentos certos. No longo prazo, a divergência é
-                muito significativa.</p>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <svg class="bd-placeholder-img rounded-circle" width="90" height="90"
+                                xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140"
+                                preserveAspectRatio="xMidYMid slice" focusable="false">
+                                <title>Placeholder</title>
+                                <rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777"
+                                    dy=".3em">140x140</text>
+                            </svg>
 
-            <h2 class="mt-5">Para que servem os juros compostos?</h2>
-            <p class="mt-4 text-start fs-6">Como você viu, o pagamento de juros tem o objetivo de remunerar quem concede
-                recursos para serem utilizados por outros, como é o caso dos investidores. Além disso, ajudam a cobrir o
-                risco de crédito existente, diante da possibilidade de o pagamento não ocorrer.</p>
-            <p class="fs-6">Nos juros compostos, especificamente, eles têm como uma das funções aumentar o patrimônio de
-                maneira exponencial. Considerando que a incidência é sobre o montante que já acumula o rendimento
-                anterior, a taxa acelera a acumulação de valores.</p>
-            <p class="fs-6">Por isso, são instrumentos importantes do mercado financeiro. Afinal, atuam para remunerar
-                os investidores nas diferentes classes de ativos e produtos financeiros.
-            </p>
-        </div>
+                            <h5 class="card-title mt-1">Card title</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in
+                                to
+                                additional content. This content is a little bit longer.</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <svg class="bd-placeholder-img rounded-circle" width="90" height="90"
+                                xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140"
+                                preserveAspectRatio="xMidYMid slice" focusable="false">
+                                <title>Placeholder</title>
+                                <rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777"
+                                    dy=".3em">140x140</text>
+                            </svg>
+
+                            <h5 class="card-title mt-1">Card title</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in
+                                to
+                                additional content. This content is a little bit longer.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!------------------------------ CONTÉUDO --------------------------------->
+            <hr class="featurette-divider">
+            <h1 class="mt-5 mb-5 text-center">Como Investir</h1>
+            <div class="row featurette mt-5 mb-5 pt-3">
+                <div class="col-md-5">
+                    <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                        height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
+                        preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa"
+                            dy=".3em">500x500</text>
+                    </svg>
+                </div>
+                <div class="col-md-7">
+                    <h2 class="featurette-heading fw-normal lh-1">Por que começar a investir?</span></h2>
+                    <p class="lead">Além de garantir tranquilidade financeira, poupar possibilita a realização de sonhos. Com hábitos de poupança e investindo adequadamente, uma pessoa pode aumentar seu patrimônio pessoal e familiar, aumentando as chances de alcançar seus objetivos.</p>
+                </div>
+            </div>
+            <hr class="featurette-divider">
+            <div class="row featurette mt-5 mb-5 pt-3">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading fw-normal lh-1">Um dos segredos para o funcionamento de uma estratégia de investimento envolve<span class="text-muted fst-italic"> os juros compostos</span></h2>
+                    <p class="lead">É pela aplicação consistente dessa taxa que seu patrimônio pode se multiplicar, levando ao alcance dos objetivos definidos.</p>
+                </div>
+                <div class="col-md-5">
+                    <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                        height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
+                        preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa"
+                            dy=".3em">500x500</text>
+                    </svg>
+
+                </div>
+            </div>
+            <hr class="featurette-divider">
     </main>
     <!------------------------------ FOOTER ----------------------------->
     <footer class="footer mt-auto py-3 my-4">

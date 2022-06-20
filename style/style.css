@@ -1,5 +1,17 @@
 :root {
-    --dark-blue: #0c3258;
-    --ligth-blue: #165a9e;
-    --white: #ffffff;
-  }
+  --dark-blue: #0c3258;
+  --ligth-blue: #165a9e;
+  --white: #ffffff;
+}
+/* Tamanho da Imagem */
+.grafico {
+  height: 85vh;
+  opacity: .9;
+}
+.graph {
+  height: 85vh;
+  opacity: .9;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  filter: rgb(0, 0, 0);
+}
