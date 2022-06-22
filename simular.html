@@ -33,24 +33,50 @@
         <h1 class="text-center bg-black py-4 text-white">Simular Investimento</h1>
         <div class="container">
             <!------------------------------ FORM ----------------------------->
+
+                <!-- // p_usuario = input("Valor presente: ")
+                // r_usuario = input("Taxa de juros anual nominal: ")
+                // n_usuario = input("Quantidade de vezes que o juros é capitalizado por ano: ")
+                // t_usuario = input("Número de anos: ") -->
             <form class="row g-5 mt-4 mb-5">
-                <div class="col-8 m-auto mb-3">
-                  <label for="nome" class="form-label">Nome</label>
-                  <input type="text" class="form-control" id="nome" aria-describedby="Nome do usuario">
+                <div class="col-6  ">
+                    <label for="nome" class="form-label">Nome</label>
+                    <input type="text" class="form-control" id="nome" aria-describedby="Nome do usuario">
                 </div>
-                <div class="col-8 m-auto mb-3">
-                  <label for="mensalidade" class="form-label">Mensalidade</label>
-                  <input type="text" class="form-control" id="mensalidade" aria-describedby="Mensalidade a ser paga">
+                <div class="col-6">
+                    <label for="mensalidade" class="form-label">Mensalidade</label>
+                    <input type="text" class="form-control" id="mensalidade" aria-describedby="Mensalidade a ser paga">
                 </div>
-                <div class="col-8 m-auto mb-5">
+                <div class="col-6  mb-5">
                     <label for="tempo" class="form-label">Tempo <span>(em anos)</span></label>
                     <input type="text" class="form-control" id="tempo" aria-describedby="Tempo do investimento">
-                  </div>
-                <div class="col-8 m-auto mb-5 text-center">
-                    <a type="submit" class="btn btn-outline-dark px-5" href="#">Simular</a>
                 </div>
-              </form>
+                <div class="col-6  mb-5">
+                    <label for="tempo" class="form-label">Tempo <span>(em anos)</span></label>
+                    <input type="text" class="form-control" id="tempo" aria-describedby="Tempo do investimento">
+                </div>
+
+                <div class="col-8 m-auto mb-5 text-center">
+                    <a type="submit" class="btn btn-outline-dark px-5"
+                        onclick="Modal.open(); calcular_simulacao(); return false;">Simular</a>
+                </div>
+            </form>
         </div>
+        <div class="modal-overlay">
+            <div class="modals">
+                <div id="result">
+                    <h2>Simulação Concluida!</h2>
+                    <p>Olá <span class="result-nome">fulano</span></p>
+                    <p>Juntando R$<span class="result-mensalidade">000</span> todo mês, você terá</p>
+                    <p>R$<span class="result-resultado">000</span> </p>
+                                <p>em <span class="result-tempo">0</span> anos</p>
+                                <div>
+                                    <a onclick="Modal.close()" href="#" class="button voltar">Simular Novamente</a>
+                                </div>
+                </div>
+            </div>
+        </div>
+
 
     </main>
     <!------------------------------ FOOTER ----------------------------->
@@ -59,10 +85,12 @@
             <small class="text-center">Feito com &#10084; por Carolina e Nicoly</small>
         </div>
     </footer>
-
+    <script src="./scripts/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
         crossorigin="anonymous"></script>
 
 </body>
+
 </html>
