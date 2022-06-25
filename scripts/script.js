@@ -1,11 +1,11 @@
 const Modal = {
-    open(){
+    open() {
         document
             .querySelector('.modal-overlay')
             .classList
             .add('active')
     },
-    close(){
+    close() {
         document
             .querySelector('.modal-overlay')
             .classList
@@ -14,25 +14,25 @@ const Modal = {
 }
 
 
-function calcular_simulacao() {
-    // Declaração de variáveis
-    var nome, mensalidade, tempo, resultado;
-    // Entrada de dados
-    nome = $("#nome").val()
-    mensalidade = $("#mensalidade").val()
-    tempo = $("#tempo").val()
-    //taxa de juros
-    var taxaJuros = 0.05; //Taxa de 5%
-    // Processamento de Dados
-    var total = mensalidade * Math.pow((1 + taxaJuros), tempo);
-    // var total = (mensalidade * (1+taxaJuros) * ((Math.pow(1+taxaJuros,tempo)-1)/taxaJuros)).toFixed(2);
-    var resultado = total.toString(); //Converte o total para string
-    // Saída de Dados
-    $(".result-nome").html(nome);
-    $(".result-mensalidade").html(mensalidade);
-    $(".result-resultado").html(resultado);
-    $(".result-tempo").html(tempo);
-}
+// function calcular_simulacao() {
+//     // Declaração de variáveis
+//     var nome, mensalidade, tempo, resultado;
+//     // Entrada de dados
+//     nome = $("#nome").val()
+//     mensalidade = $("#mensalidade").val()
+//     tempo = $("#tempo").val()
+//     //taxa de juros
+//     var taxaJuros = 0.05; //Taxa de 5%
+//     // Processamento de Dados
+//     var total = mensalidade * Math.pow((1 + taxaJuros), tempo);
+//     // var total = (mensalidade * (1+taxaJuros) * ((Math.pow(1+taxaJuros,tempo)-1)/taxaJuros)).toFixed(2);
+//     var resultado = total.toString(); //Converte o total para string
+//     // Saída de Dados
+//     $(".result-nome").html(nome);
+//     $(".result-mensalidade").html(mensalidade);
+//     $(".result-resultado").html(resultado);
+//     $(".result-tempo").html(tempo);
+// }
 
 
 // '''
@@ -80,3 +80,52 @@ function calcular_simulacao() {
 
 // else:
 //     print("Um ou mais valores informados são inválidos.")
+
+// Teste
+// var valor = document.getElementById("mensalidade");
+// var taxaJuros = document.getElementById("taxa");
+// var qtdJuros = document.getElementById("qtdJuros");
+// var tempo = document.getElementById("tempo");
+
+// if (valor.isdigit() & taxaJuros.isdigit() & qtdJuros.isdigit() & tempo.isdigit()){
+//     var p = float(valor)
+//     var r = float(taxaJuros) / 100
+//     var n = float(qtdJuros)
+//     var t = float(tempo)
+
+//     var formula = p * (1 + r / n) ** (t * n)
+
+//     var resultValor = document.getElementsByClassName("result-valor").html(p);
+
+//     var resultTotal = document.getElementsByClassName("result-total").html(formula);
+
+//     var resultTempo = document.getElementsByClassName("result-tempo").html(t);
+// }
+// else{
+//     document.write("Um ou mais valores informados são inválidos.")
+// }
+function calculaJuros() {
+    // Formula usada => M = C * ( 1 + T ) ^ i
+
+    //Captura dos valores dos inputs e declaração de variáveis
+    var nome = $('#nome').val();
+    var mensal = $('#mensalidade').val();
+    var taxaJuros = $('#taxa').val();
+    var tempoAplicacao = $('#tempo').val();
+
+    // Dividindo  taxa de juros por 100
+    var taxaJuros = taxaJuros / 100; 
+
+    // Formula
+    var formula = mensal * Math.pow((1 + taxaJuros), tempoAplicacao);
+
+    // Tranformando em string
+    var total = formula.toFixed(2);
+    
+    // Exibir na tela 
+    $("#result-nome").html(nome);
+    $("#result-valor").html(mensal);
+    $("#result-total").html(total);
+    $("#result-tempo").html(tempoAplicacao);
+    
+}

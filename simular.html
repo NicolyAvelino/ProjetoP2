@@ -34,31 +34,34 @@
         <div class="container">
             <!------------------------------ FORM ----------------------------->
 
-                <!-- // p_usuario = input("Valor presente: ")
+            <!-- // p_usuario = input("Valor presente: ")
                 // r_usuario = input("Taxa de juros anual nominal: ")
                 // n_usuario = input("Quantidade de vezes que o juros é capitalizado por ano: ")
                 // t_usuario = input("Número de anos: ") -->
             <form class="row g-5 mt-4 mb-5">
-                <div class="col-6  ">
+                <div class="col-6">
                     <label for="nome" class="form-label">Nome</label>
-                    <input type="text" class="form-control" id="nome" aria-describedby="Nome do usuario">
+                    <input type="text" class="form-control" id="nome"
+                        aria-describedby="Nome Usuario">
                 </div>
                 <div class="col-6">
                     <label for="mensalidade" class="form-label">Mensalidade</label>
-                    <input type="text" class="form-control" id="mensalidade" aria-describedby="Mensalidade a ser paga">
+                    <input type="number" class="form-control" id="mensalidade" aria-describedby="Mensalidade a ser paga">
                 </div>
-                <div class="col-6  mb-5">
-                    <label for="tempo" class="form-label">Tempo <span>(em anos)</span></label>
-                    <input type="text" class="form-control" id="tempo" aria-describedby="Tempo do investimento">
+                <div class="col-6 mb-5">
+                    <label for="taxa" class="form-label">Taxa de Juros <span>(anual)</span></label>
+                    <input type="number" class="form-control" id="taxa" aria-describedby="taxa de juros">
                 </div>
-                <div class="col-6  mb-5">
-                    <label for="tempo" class="form-label">Tempo <span>(em anos)</span></label>
-                    <input type="text" class="form-control" id="tempo" aria-describedby="Tempo do investimento">
+                
+                <div class="col-6 mb-5">
+                    <label for="tempo" class="form-label">Tempo <span>(em anos)</span> da Aplicação</label>
+                    <input type="number" class="form-control" id="tempo" aria-describedby="Tempo do investimento">
                 </div>
+
 
                 <div class="col-8 m-auto mb-5 text-center">
                     <a type="submit" class="btn btn-outline-dark px-5"
-                        onclick="Modal.open(); calcular_simulacao(); return false;">Simular</a>
+                        onclick="Modal.open(); calculaJuros(); return false;">Simular</a>
                 </div>
             </form>
         </div>
@@ -66,17 +69,17 @@
             <div class="modals">
                 <div id="result">
                     <h2>Simulação Concluida!</h2>
-                    <p>Olá <span class="result-nome">fulano</span></p>
-                    <p>Juntando R$<span class="result-mensalidade">000</span> todo mês, você terá</p>
-                    <p>R$<span class="result-resultado">000</span> </p>
-                                <p>em <span class="result-tempo">0</span> anos</p>
-                                <div>
-                                    <a onclick="Modal.close()" href="#" class="button voltar">Simular Novamente</a>
-                                </div>
+                    <p>Olá, <span id="result-nome"></span>!</p>
+                    <p>Juntando R$<span id="result-valor">000</span> todo mês, você terá R$<span id="result-total">000</span> em <span id="result-tempo">0</span> anos.</p>
+                    <div>
+                        <a onclick="Modal.close()" href="#" class="button voltar">Simular Novamente</a>
+                    </div>
                 </div>
             </div>
         </div>
-
+        <!-- <p>Olá! Juntando R$<span id="result-valor">000</span> todo mês, você terá</p>
+        <p>R$<span id="result-total">000</span> </p>
+        <p>em <span id="result-tempo">0</span> anos</p> -->
 
     </main>
     <!------------------------------ FOOTER ----------------------------->
