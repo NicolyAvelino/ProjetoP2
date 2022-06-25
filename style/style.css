@@ -16,6 +16,9 @@
   filter: grayscale(100%);
   filter: rgb(0, 0, 0);
 }
+.imgcomopq{
+  max-width: 500px;
+}
 /* header=============================================================== */
 .nav-link{
   color: var(--cinza) !important;
