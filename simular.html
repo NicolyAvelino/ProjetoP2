@@ -9,6 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="style/style.css">
+    <link rel="icon" type="image/x-icon" href="./img/iconnc.svg">
     <title>Simulador</title>
 
 </head>
@@ -17,10 +18,7 @@
     <!------------------------------ HEADER ----------------------------->
     <header class="container">
         <div class="d-flex flex-wrap justify-content-center py-3">
-            <!-- <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none"> -->
             <h1 class=" mb-3 mb-md-0 me-md-auto text-dark logo">N&C</h1>
-            <!-- </a> -->
-
             <ul class="nav nav-pills">
                 <li class="nav-item"><a href="./index.html" class="nav-link" aria-current="page">Home</a></li>
                 <li class="nav-item"><a href="./simular.html" class="nav-link active">Simular</a></li>
@@ -33,11 +31,6 @@
         <h1 class="text-center bg-black py-4 text-white">Simular Investimento</h1>
         <div class="container">
             <!------------------------------ FORM ----------------------------->
-
-            <!-- // p_usuario = input("Valor presente: ")
-                // r_usuario = input("Taxa de juros anual nominal: ")
-                // n_usuario = input("Quantidade de vezes que o juros é capitalizado por ano: ")
-                // t_usuario = input("Número de anos: ") -->
             <form class="row g-5 mt-4 mb-5">
                 <div class="col-6">
                     <label for="nome" class="form-label">Nome</label>
@@ -69,9 +62,9 @@
             <div class="modals">
                 <div id="result">
                     <h2>Simulação Concluida!</h2>
-                    <p>Olá, <span id="result-nome"></span>!</p>
                     <hr class="featurette-divider">
-                    <p>Juntando R$<span id="result-valor">000</span> , você terá o total de R$<span id="result-total">000</span> em <span id="result-tempo">0</span> período de tempo.</p>
+                    <p>Olá, <span id="result-nome"></span>!</p>
+                    <p>Com a mensalidade de R$<span id="result-valor">000</span> , você terá o total de R$<span id="result-total">000</span> em <span id="result-tempo">0</span> período de tempo.</p>
                     <div>
                         <a onclick="Modal.close()" href="#" class="button voltar">Simular Novamente</a>
                     </div>
