@@ -1,11 +1,8 @@
 :root {
-  --dark-blue: #0c3258;
-  --ligth-blue: #165a9e;
   --white: #ffffff;
-  --amarelo: #f6ef74;
+  --amarelo: #eea22d;
   --cinza: #404143;
 }
-/* https://img.freepik.com/vetores-gratis/paleta-de-tons-de-cinza-e-amarelo-com-hexadecimal_163545-33.jpg?w=2000 */
 
 /* Tamanho da Imagem */
 .grafico {
@@ -18,6 +15,17 @@
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
   filter: rgb(0, 0, 0);
+}
+.imgcomopq{
+  max-width: 500px;
+}
+/* header=============================================================== */
+.nav-link{
+  color: var(--cinza) !important;
+}
+.nav-link.active{
+  color: var(--white) !important;
+  background-color:   var(--amarelo) !important;
 }
 /* MODAL =================================== */
 .modal-overlay{
@@ -47,14 +55,30 @@
   /* position: relative;
   z-index: 10; */
 }
-
 #result{
   max-width: 500px;
-
 }
 #result h2{
   margin-top: 0;
 }
 #result span{
   font-weight: bold;
+}
+
+/* comoFunciona ================================================= */
+b,span{
+  color: var(--amarelo);
+}
+
+.btn-outline-dark{
+  color: var(--amarelo);
+  border: 1px solid var(--amarelo);
+
+}
+.btn-outline-dark:hover{
+  background-color: var(--amarelo);
+  border: 1px solid var(--amarelo);
+}
+.bi{
+  color: var(--amarelo);
 }
