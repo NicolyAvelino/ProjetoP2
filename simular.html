@@ -45,7 +45,7 @@
                         aria-describedby="Nome Usuario">
                 </div>
                 <div class="col-6">
-                    <label for="mensalidade" class="form-label">Mensalidade</label>
+                    <label for="mensalidade" class="form-label">Mensalidade <span>(sem pontuação)</span></label>
                     <input type="number" class="form-control" id="mensalidade" aria-describedby="Mensalidade a ser paga">
                 </div>
                 <div class="col-6 mb-5">
@@ -54,7 +54,7 @@
                 </div>
                 
                 <div class="col-6 mb-5">
-                    <label for="tempo" class="form-label">Tempo <span>(em anos)</span> da Aplicação</label>
+                    <label for="tempo" class="form-label">Período de tempo</label>
                     <input type="number" class="form-control" id="tempo" aria-describedby="Tempo do investimento">
                 </div>
 
@@ -70,17 +70,14 @@
                 <div id="result">
                     <h2>Simulação Concluida!</h2>
                     <p>Olá, <span id="result-nome"></span>!</p>
-                    <p>Juntando R$<span id="result-valor">000</span> todo mês, você terá R$<span id="result-total">000</span> em <span id="result-tempo">0</span> anos.</p>
+                    <hr class="featurette-divider">
+                    <p>Juntando R$<span id="result-valor">000</span> , você terá o total de R$<span id="result-total">000</span> em <span id="result-tempo">0</span> período de tempo.</p>
                     <div>
                         <a onclick="Modal.close()" href="#" class="button voltar">Simular Novamente</a>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- <p>Olá! Juntando R$<span id="result-valor">000</span> todo mês, você terá</p>
-        <p>R$<span id="result-total">000</span> </p>
-        <p>em <span id="result-tempo">0</span> anos</p> -->
-
     </main>
     <!------------------------------ FOOTER ----------------------------->
     <footer class="footer mt-auto py-3 bg-black text-white">

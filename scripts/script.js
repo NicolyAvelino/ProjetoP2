@@ -105,7 +105,7 @@ const Modal = {
 //     document.write("Um ou mais valores informados são inválidos.")
 // }
 function calculaJuros() {
-    // Formula usada => M = C * ( 1 + T ) ^ i
+    // Formula usada => M = C (1+i) ^ t
 
     //Captura dos valores dos inputs e declaração de variáveis
     var nome = $('#nome').val();
@@ -117,15 +117,14 @@ function calculaJuros() {
     var taxaJuros = taxaJuros / 100; 
 
     // Formula
-    var formula = mensal * Math.pow((1 + taxaJuros), tempoAplicacao);
+    var M = mensal * Math.pow((1 + taxaJuros), tempoAplicacao);
 
     // Tranformando em string
-    var total = formula.toFixed(2);
+    var total = M.toFixed(2);
     
     // Exibir na tela 
     $("#result-nome").html(nome);
     $("#result-valor").html(mensal);
     $("#result-total").html(total);
-    $("#result-tempo").html(tempoAplicacao);
-    
+    $("#result-tempo").html(tempoAplicacao); 
 }
