@@ -82,3 +82,8 @@ b,span{
 .bi{
   color: var(--amarelo);
 }
+
+/* SIMULAR ================================================= */
+form{
+  height: 100hv;
+}
